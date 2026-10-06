@@ -69,424 +69,402 @@ jobs:
           fi
 
           cp -f "configs/templates/${TNAME}.config" .config
-          sed -i 's/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=n/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y/g' .config
+          sed -i 's/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=n/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y/g' .confi
 
-        ###  清除默认配置###
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_OPENVPN"
-        disable_feature "CONFIG_FIRMWARE_ENABLE_IPV6"
-        disable_feature "CONFIG_FIRMWARE_ENABLE_USB"
-        disable_feature "CONFIG_FIRMWARE_ENABLE_UFSD"
-        disable_feature "CONFIG_FIRMWARE_ENABLE_FAT"
-        disable_feature "CONFIG_FIRMWARE_ENABLE_EXFAT"
-        disable_feature "CONFIG_FIRMWARE_ENABLE_EXT2"
-        disable_feature "CONFIG_FIRMWARE_ENABLE_EXT3"
-        disable_feature "CONFIG_FIRMWARE_ENABLE_EXT4"
-        disable_feature "CONFIG_FIRMWARE_ENABLE_XFS"
-        disable_feature "CONFIG_FIRMWARE_ENABLE_FUSE"
-        disable_feature "CONFIG_FIRMWARE_ENABLE_SWAP"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_UVC"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_HID"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SERIAL"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_AUDIO"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_XFRM"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_QOS"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_IMQ"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_IFB"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_IPSET"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_NFSD"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_NFSC"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_CIFS"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_NTFS_3G"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_LPRD"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_U2EC"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_TCPDUMP"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_HDPARM"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_PARTED"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SMBD"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SMBD36"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_WINS"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SMBD_SYSLOG"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_FTPD"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_RPL2TP"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_DDNS_SSL"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_HTTPS"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SFTP"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_DROPBEAR"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_OPENSSH"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SSWAN"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_XUPNPD"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_MINIDLNA"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_FIREFLY"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_ARIA"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_CURL"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_DOGCOM"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_MINIEAP"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_NAPT66"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SSSERVER"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_VLMCSD"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_TTYD"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_LRZSZ"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_HTOP"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_NANO"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_IPERF3"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_DUMP1090"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_RTL_SDR"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_MTR"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SOCAT"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SRELAY"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_MENTOHUST"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_FRPC"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_FRPS"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_TUNSAFE"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_WIREGUARD"   
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_ZEROTIER"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_ALIDDNS"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_V2RAY"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_XRAY"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_TROJAN"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_SSOBFS"
-        disable_feature "CONFIG_FIRMWARE_INCLUDE_NPC"
-        disable_feature "CONFIG_FIRMWARE_WEBUI_HIDE_VPN"
+
+
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_OPENVPN"
+          disable_feature "CONFIG_FIRMWARE_ENABLE_IPV6"
+          disable_feature "CONFIG_FIRMWARE_ENABLE_USB"
+          disable_feature "CONFIG_FIRMWARE_ENABLE_UFSD"
+          disable_feature "CONFIG_FIRMWARE_ENABLE_FAT"
+          disable_feature "CONFIG_FIRMWARE_ENABLE_EXFAT"
+          disable_feature "CONFIG_FIRMWARE_ENABLE_EXT2"
+          disable_feature "CONFIG_FIRMWARE_ENABLE_EXT3"
+          disable_feature "CONFIG_FIRMWARE_ENABLE_EXT4"
+          disable_feature "CONFIG_FIRMWARE_ENABLE_XFS"
+          disable_feature "CONFIG_FIRMWARE_ENABLE_FUSE"
+          disable_feature "CONFIG_FIRMWARE_ENABLE_SWAP"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_UVC"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_HID"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SERIAL"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_AUDIO"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_XFRM"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_QOS"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_IMQ"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_IFB"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_IPSET"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_NFSD"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_NFSC"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_CIFS"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_NTFS_3G"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_LPRD"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_U2EC"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_TCPDUMP"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_HDPARM"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_PARTED"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SMBD"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SMBD36"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_WINS"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SMBD_SYSLOG"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_FTPD"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_RPL2TP"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_DDNS_SSL"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_HTTPS"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SFTP"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_DROPBEAR"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_OPENSSH"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SSWAN"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_XUPNPD"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_MINIDLNA"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_FIREFLY"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_ARIA"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_CURL"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_DOGCOM"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_MINIEAP"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_NAPT66"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SSSERVER"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_VLMCSD"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_TTYD"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_LRZSZ"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_HTOP"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_NANO"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_IPERF3"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_DUMP1090"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_RTL_SDR"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_MTR"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SOCAT"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SRELAY"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_MENTOHUST"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_FRPC"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_FRPS"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_TUNSAFE"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_WIREGUARD"   
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_ZEROTIER"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_ALIDDNS"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_V2RAY"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_XRAY"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_TROJAN"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_SSOBFS"
+          disable_feature "CONFIG_FIRMWARE_INCLUDE_NPC"
+          disable_feature "CONFIG_FIRMWARE_WEBUI_HIDE_VPN"
         
-        # 清除默认配置结束
-        ######################################################################
-        #以下选项是定义你需要的功能，（y=集成,n=忽略），重新写入到.config文件
-        ######################################################################
+            # 清除默认配置结束
+            ######################################################################
+            #以下选项是定义你需要的功能，（y=集成,n=忽略），重新写入到.config文件
+            ######################################################################
 
-        set_feature "CONFIG_FIRMWARE_ENABLE_IPV6" "y"
-        set_feature "CONFIG_FIRMWARE_ENABLE_USB" "y"
-        set_feature "CONFIG_FIRMWARE_INCLUDE_CURL" "y"
+          set_feature "CONFIG_FIRMWARE_ENABLE_IPV6" "y"
+          set_feature "CONFIG_FIRMWARE_ENABLE_USB" "y"
+          set_feature "CONFIG_FIRMWARE_INCLUDE_CURL" "y"
 
-        ##系统组件
-        #启用 IPv6 支持
-        set_feature "CONFIG_FIRMWARE_ENABLE_IPV6" "y"
+            ##系统组件
+            #启用 IPv6 支持
+          set_feature "CONFIG_FIRMWARE_ENABLE_IPV6" "y"
         
-        #启用 USB 支持
-        set_feature "CONFIG_FIRMWARE_ENABLE_USB" "y"
+            #启用 USB 支持
+          set_feature "CONFIG_FIRMWARE_ENABLE_USB" "y"
         
-        #通过 Paragon 的 "ufsd" 驱动启用 NTFS 文件系统支持。约 0.4MB
-        set_feature "CONFIG_FIRMWARE_ENABLE_UFSD" "y"
+            #通过 Paragon 的 "ufsd" 驱动启用 NTFS 文件系统支持。约 0.4MB
+          set_feature "CONFIG_FIRMWARE_ENABLE_UFSD" "y"
         
-        #启用 FAT/FAT32 文件系统支持。约 0.1MB
-        set_feature "CONFIG_FIRMWARE_ENABLE_FAT" "y"
+            #启用 FAT/FAT32 文件系统支持。约 0.1MB
+          set_feature "CONFIG_FIRMWARE_ENABLE_FAT" "y"
         
-        #启用 exFAT（同时支持 FAT/FAT32）文件系统支持。约 0.12MB
-        set_feature "CONFIG_FIRMWARE_ENABLE_EXFAT" "y"
+            #启用 exFAT（同时支持 FAT/FAT32）文件系统支持。约 0.12MB
+          set_feature "CONFIG_FIRMWARE_ENABLE_EXFAT" "y"
         
-        #启用 EXT2 文件系统支持。约 0.1MB
-        set_feature "CONFIG_FIRMWARE_ENABLE_EXT2" "y"
+            #启用 EXT2 文件系统支持。约 0.1MB
+          set_feature "CONFIG_FIRMWARE_ENABLE_EXT2" "y"
         
-        #启用 EXT3 文件系统支持。约 0.2MB
-        set_feature "CONFIG_FIRMWARE_ENABLE_EXT3" "y"
+            #启用 EXT3 文件系统支持。约 0.2MB
+          set_feature "CONFIG_FIRMWARE_ENABLE_EXT3" "y"
         
-        #启用 EXT4（同时支持 EXT3/EXT2）文件系统支持。约 0.4MB
-        set_feature "CONFIG_FIRMWARE_ENABLE_EXT4" "y"
+            #启用 EXT4（同时支持 EXT3/EXT2）文件系统支持。约 0.4MB
+          set_feature "CONFIG_FIRMWARE_ENABLE_EXT4" "y"
         
-        ##启用 XFS 文件系统支持。约 0.6MB
-        set_feature "CONFIG_FIRMWARE_ENABLE_XFS" "n" 
+            ##启用 XFS 文件系统支持。约 0.6MB
+          set_feature "CONFIG_FIRMWARE_ENABLE_XFS" "n" 
 
-        ##启用 FUSE（用户空间文件系统）支持。约 0.1MB
-        set_feature "CONFIG_FIRMWARE_ENABLE_FUSE" "y"
+            ##启用 FUSE（用户空间文件系统）支持。约 0.1MB
+          set_feature "CONFIG_FIRMWARE_ENABLE_FUSE" "y"
 
-        ##启用交换文件/分区支持。约 0.05MB
-        set_feature "CONFIG_FIRMWARE_ENABLE_SWAP" "y"
+            ##启用交换文件/分区支持。约 0.05MB
+          set_feature "CONFIG_FIRMWARE_ENABLE_SWAP" "y"
 
-        ##包含 UVC 摄像头模块。约 0.2MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_UVC" "y"
+            ##包含 UVC 摄像头模块。约 0.2MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_UVC" "y"
 
-        ##包含 USB-HID 模块。约 0.2MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_HID" "y"
+            ##包含 USB-HID 模块。约 0.2MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_HID" "y"
 
-        ##包含 USB-Serial 模块（例如 pl2303）。约 0.03MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SERIAL" "n"
+            ##包含 USB-Serial 模块（例如 pl2303）。约 0.03MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SERIAL" "n"
 
-        ##包含 USB-Audio 模块。约 0.46MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_AUDIO" "n"
+            ##包含 USB-Audio 模块。约 0.46MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_AUDIO" "n"
 
-        ##包含 XFRM（IPsec）模块及 iptables 扩展。约 0.2MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_XFRM" "y"
+            ##包含 XFRM（IPsec）模块及 iptables 扩展。约 0.2MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_XFRM" "y"
 
-        ##包含网络 QoS 调度模块。约 0.2MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_QOS" "n"
+            ##包含网络 QoS 调度模块。约 0.2MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_QOS" "n"
 
-        ## 包含用于流量整形的 IMQ 模块（会略微降低性能）。约 0.02MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_IMQ" "n"
+            ## 包含用于流量整形的 IMQ 模块（会略微降低性能）。约 0.02MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_IMQ" "n"
 
-        ##包含用于流量整形的 IFB 模块。约 0.03MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_IFB" "n"
+            ##包含用于流量整形的 IFB 模块。约 0.03MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_IFB" "n"
 
-        ##包含 IPSet 工具和内核模块。约 0.4MB
-        #set_feature "CONFIG_FIRMWARE_INCLUDE_IPSET" "y"
+            ##包含 IPSet 工具和内核模块。约 0.4MB
+            #set_feature "CONFIG_FIRMWARE_INCLUDE_IPSET" "y"
 
-        ##包含 NFSv3 服务器。约 0.6MB  已删除 /trunk/user/httpd/common.h
-        set_feature "CONFIG_FIRMWARE_INCLUDE_NFSD" "n"
+             ##包含 NFSv3 服务器。约 0.6MB  已删除 /trunk/user/httpd/common.h
+          set_feature "CONFIG_FIRMWARE_INCLUDE_NFSD" "n"
 
-        ## 包含 CIFS（SMB）客户端。约 0.2MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_CIFS" "y"
+            ## 包含 CIFS（SMB）客户端。约 0.2MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_CIFS" "y"
 
-        ##包含 NTFS-3G FUSE 驱动（替代 Paragon 的 "ufsd" 驱动）。约 0.4MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_NTFS_3G" "n"
+            ##包含 NTFS-3G FUSE 驱动（替代 Paragon 的 "ufsd" 驱动）。约 0.4MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_NTFS_3G" "n"
 
-        ##包含 LPR 打印机守护程序。约 0.12MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_LPRD" "y"
+            ##包含 LPR 打印机守护程序。约 0.12MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_LPRD" "y"
 
-        ##包含 USB-over-Ethernet 打印机守护程序。约 0.05MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_U2EC" "y"
+            ##包含 USB-over-Ethernet 打印机守护程序。约 0.05MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_U2EC" "y"
 
-        ##包含 "tcpdump" 工具。约 0.6MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_TCPDUMP" "y"
+            ##包含 "tcpdump" 工具。约 0.6MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_TCPDUMP" "y"
 
-        ## 包含 "hdparm" 工具（允许设置硬盘节能超时时间和 APM）。约 0.1MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_HDPARM" "y"
+            ## 包含 "hdparm" 工具（允许设置硬盘节能超时时间和 APM）。约 0.1MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_HDPARM" "y"
 
-        ##包含 "parted" 工具（允许创建 GPT 分区）。约 0.3MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_PARTED" "y"
+           ##包含 "parted" 工具（允许创建 GPT 分区）。约 0.3MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_PARTED" "y"
 
-        ##包含 SMB（和 WINS）服务器。约 1.5MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SMBD" "y"
+            ##包含 SMB（和 WINS）服务器。约 1.5MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SMBD" "y"
 
-        ##使用 samba3.6 替代 samba3
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SMBD36" "y"
+            ##使用 samba3.6 替代 samba3
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SMBD36" "y"
 
-        ##包含 SMB 和 WINS 服务器的日志功能。约 0.3MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SMBD_SYSLOG" "n"
+            ##包含 SMB 和 WINS 服务器的日志功能。约 0.3MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SMBD_SYSLOG" "n"
 
-        ##包含 FTP 服务器。约 0.2MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_FTPD" "y"
+            ##包含 FTP 服务器。约 0.2MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_FTPD" "y"
 
-        ##包含替代的 L2TP 控制客户端 RP-L2TP。约 0.1MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_RPL2TP" "n"
+            ##包含替代的 L2TP 控制客户端 RP-L2TP。约 0.1MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_RPL2TP" "n"
 
-        ##包含 EAP-TTLS 和 EAP-PEAP 认证支持。openssl 约 1.2MB，wpa_supplicant 约 0.04MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP" "y"
+            ##包含 EAP-TTLS 和 EAP-PEAP 认证支持。openssl 约 1.2MB，wpa_supplicant 约 0.04MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP" "y"
 
-        ##为 DDNS 客户端包含 HTTPS 支持。openssl 约 1.2MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_DDNS_SSL" "y"
+            ##为 DDNS 客户端包含 HTTPS 支持。openssl 约 1.2MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_DDNS_SSL" "y"
 
-        ##包含 HTTPS 支持。openssl 约 1.2MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_HTTPS" "y"
+            ##包含 HTTPS 支持。openssl 约 1.2MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_HTTPS" "y"
 
-        ##包含 sftp 服务器。openssl 约 1.2MB，sftp-server 约 0.06MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SFTP" "y"
+            ##包含 sftp 服务器。openssl 约 1.2MB，sftp-server 约 0.06MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SFTP" "y"
 
-        ##包含 dropbear SSH。约 0.3MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_DROPBEAR" "y"
+            ##包含 dropbear SSH。约 0.3MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_DROPBEAR" "y"
 
-        ## 加速 dropbear 的对称加密和哈希运算。约 0.06MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE" "y"
+            ## 加速 dropbear 的对称加密和哈希运算。约 0.06MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE" "y"
 
-        ##使用 OpenSSH 替代 dropbear。openssl 约 1.2MB，openssh 约 1.0MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_OPENSSH" "n"
+            ##使用 OpenSSH 替代 dropbear。openssl 约 1.2MB，openssh 约 1.0MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_OPENSSH" "n"
 
-        ##包含 StrongSwan。XFRM 模块约 0.2MB，strongswan 约 0.7MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SSWAN" "n"
+            ##包含 StrongSwan。XFRM 模块约 0.2MB，strongswan 约 0.7MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SSWAN" "n"
 
-        ##为 openssl 库添加椭圆曲线（EC）支持。约 0.1MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC" "y"
+            ##为 openssl 库添加椭圆曲线（EC）支持。约 0.1MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC" "y"
 
-        ##包含 "openssl" 可执行程序，用于生成证书。约 0.4MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE" "y"
+            ##包含 "openssl" 可执行程序，用于生成证书。约 0.4MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE" "y"
 
-        ##包含 xUPNPd IPTV 媒体服务器。约 0.3MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_XUPNPD" "y"
+            ##包含 xUPNPd IPTV 媒体服务器。约 0.3MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_XUPNPD" "y"
 
-        ##包含 Minidlna UPnP 媒体服务器。约 1.6MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_MINIDLNA" "n"
+            ##包含 Minidlna UPnP 媒体服务器。约 1.6MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_MINIDLNA" "n"
 
-        ##包含 Firefly iTunes 媒体服务器。约 1.0MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_FIREFLY" "n"
+            ##包含 Firefly iTunes 媒体服务器。约 1.0MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_FIREFLY" "n"
 
-        ##为 Minidlna 和 Firefly 包含 ffmpeg 0.11.x（替代 0.6.x）。约 0.1MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW" "n"
+            ##为 Minidlna 和 Firefly 包含 ffmpeg 0.11.x（替代 0.6.x）。约 0.1MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW" "n"
 
 
 
-        ##包含 Transmission 种子下载工具。openssl 约 1.2MB，transmission 约 1.5MB 已删除 /trunk/user/httpd/common.h
-        set_feature "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION" "n"
+            ##包含 Transmission 种子下载工具。openssl 约 1.2MB，transmission 约 1.5MB 已删除 /trunk/user/httpd/common.h
+          set_feature "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION" "n"
 
-        ##包含 Transmission-Web-Control（高级 WebUI）。约 0.8MB 已删除 /trunk/user/httpd/common.h
-        set_feature "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL" "n"
+            ##包含 Transmission-Web-Control（高级 WebUI）。约 0.8MB 已删除 /trunk/user/httpd/common.h
+          set_feature "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL" "n"
 
-        ##包含 Aria2 下载管理器。openssl 约 1.2MB，aria2 约 3.5MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_ARIA" "n"
+            ##包含 Aria2 下载管理器。openssl 约 1.2MB，aria2 约 3.5MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_ARIA" "n"
 
-        ##包含 Aria2 WEB 控制界面。约 0.7MB。
-        set_feature "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL" "n"
+            ##包含 Aria2 WEB 控制界面。约 0.7MB。
+          set_feature "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL" "n"
 
         
 
-        ##下载工具 curl 必备
-        set_feature "CONFIG_FIRMWARE_INCLUDE_CURL" "y"
+            ##下载工具 curl 必备
+          set_feature "CONFIG_FIRMWARE_INCLUDE_CURL" "y"
 
-        ##校园网 已删除 /trunk/user/httpd/common.h
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT" "n"
+            ##校园网 已删除 /trunk/user/httpd/common.h
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT" "n"
         
-        ## OpenVPN。需要 IPv6 支持。openssl 约 1.2MB，openvpn 约 0.4MB
-        set_feature "CONFIG_FIRMWARE_INCLUDE_OPENVPN" "n"
+            ## OpenVPN。需要 IPv6 支持。openssl 约 1.2MB，openvpn 约 0.4MB
+          set_feature "CONFIG_FIRMWARE_INCLUDE_OPENVPN" "n"
 
-        ## 广东工业校园认证
-        set_feature "CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM" "n"
+            ## 广东工业校园认证
+          set_feature "CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM" "n"
 
-         ## 哆点校园认证
-        set_feature "CONFIG_FIRMWARE_INCLUDE_DOGCOM" "n"
+             ## 哆点校园认证
+          set_feature "CONFIG_FIRMWARE_INCLUDE_DOGCOM" "n"
 
-         ## 锐捷认证
-        set_feature "CONFIG_FIRMWARE_INCLUDE_MINIEAP" "n"
+             ## 锐捷认证
+          set_feature "CONFIG_FIRMWARE_INCLUDE_MINIEAP" "n"
 
-         ## 南京校园？
-        set_feature "CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT" "n"
+             ## 南京校园？
+          set_feature "CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT" "n"
 
-         ## IPV6中继
-        set_feature "CONFIG_FIRMWARE_INCLUDE_NAPT66" "y"
+             ## IPV6中继
+          set_feature "CONFIG_FIRMWARE_INCLUDE_NAPT66" "y"
 
-         ## ss服务器
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SSSERVER" "n"
+             ## ss服务器
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SSSERVER" "n"
 
-         ## SOFTETHERVPN服务器
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER" "n"
+             ## SOFTETHERVPN服务器
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER" "n"
 
-         ## SOFTETHERVPN客户端
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT" "n"
+             ## SOFTETHERVPN客户端
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT" "n"
  
-         ## SOFTETHERVPN
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD" "n"
+             ## SOFTETHERVPN
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD" "n"
 
-         ## DNS转发 已删除 请查看/trunk/user/httpd/common.h
-        set_feature "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER" "n"
+             ## DNS转发 已删除 请查看/trunk/user/httpd/common.h
+          set_feature "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER" "n"
 
-         ## KMS服务器 已删除 /trunk/user/httpd/common.h
-        set_feature "CONFIG_FIRMWARE_INCLUDE_VLMCSD" "n"
+             ## KMS服务器 已删除 /trunk/user/httpd/common.h
+          set_feature "CONFIG_FIRMWARE_INCLUDE_VLMCSD" "n"
 
-         ## TTYD
-        set_feature "CONFIG_FIRMWARE_INCLUDE_TTYD" "n"
+             ## TTYD
+          set_feature "CONFIG_FIRMWARE_INCLUDE_TTYD" "n"
 
-         ## 文件传输工具
-        set_feature "CONFIG_FIRMWARE_INCLUDE_LRZSZ" "n"
+             ## 文件传输工具
+          set_feature "CONFIG_FIRMWARE_INCLUDE_LRZSZ" "n"
 
-         ## 系统状态监控工具
-        set_feature "CONFIG_FIRMWARE_INCLUDE_HTOP" "n"
+             ## 系统状态监控工具
+          set_feature "CONFIG_FIRMWARE_INCLUDE_HTOP" "n"
 
-         ## 文本编辑器
-        set_feature "CONFIG_FIRMWARE_INCLUDE_NANO" "n"
+             ## 文本编辑器
+          set_feature "CONFIG_FIRMWARE_INCLUDE_NANO" "n"
 
-         ## iperf3测速软件
-        set_feature "CONFIG_FIRMWARE_INCLUDE_IPERF3" "n"
+             ## iperf3测速软件
+          set_feature "CONFIG_FIRMWARE_INCLUDE_IPERF3" "n"
 
-        ## DUMP1090
-        set_feature "CONFIG_FIRMWARE_INCLUDE_DUMP1090" "n"
+            ## DUMP1090
+          set_feature "CONFIG_FIRMWARE_INCLUDE_DUMP1090" "n"
 
-        ## RTL_SDR
-        set_feature "CONFIG_FIRMWARE_INCLUDE_RTL_SDR" "y"
+            ## RTL_SDR
+          set_feature "CONFIG_FIRMWARE_INCLUDE_RTL_SDR" "y"
 
-        ## MTR
-        set_feature "CONFIG_FIRMWARE_INCLUDE_MTR" "y"
+            ## MTR
+          set_feature "CONFIG_FIRMWARE_INCLUDE_MTR" "y"
 
-        ## ipv6端口转发工具
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SOCAT" "y"
+            ## ipv6端口转发工具
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SOCAT" "y"
 
-        ## SRELAY代理
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SRELAY" "n"
+            ## SRELAY代理
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SRELAY" "n"
 
-        ## MENTOHUST校园认证 已删除 请查看/trunk/user/httpd/common.h
-        set_feature "CONFIG_FIRMWARE_INCLUDE_MENTOHUST" "n"
+             ## MENTOHUST校园认证 已删除 请查看/trunk/user/httpd/common.h
+          set_feature "CONFIG_FIRMWARE_INCLUDE_MENTOHUST" "n"
 
-        ##################################
-          ## FRPC 客户端 约8k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_FRPC" "n"
-         ## FRPS 服务端 约8k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_FRPS" "n"
-         ## wireguard 约1M
-        set_feature "CONFIG_FIRMWARE_INCLUDE_WIREGUARD" "n"
-         ## tunsafe（wireguard的TCP方式）
-        set_feature "CONFIG_FIRMWARE_INCLUDE_TUNSAFE" "n" 
-         ## zerotier 约 20k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_ZEROTIER" "n"
-         #阿里DDNS ~20k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_ALIDDNS" "n"
-         #ddnsto 约800k  已删除 /trunk/user/httpd/common.h
-        set_feature "CONFIG_FIRMWARE_INCLUDE_DDNSTO" "n"
-          #tailscale 约20k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_TAILSCALE" "n"
-          #皎月连 约20k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_NATPIERCE" "n"
-           #vnt客户端 约80k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_VNTCLI" "n"
-            #vnt服务端 约50k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_VNTS" "n"
-         #CF的隧道 约50k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_CLOUDFLARED" "n" 
-          #LUCKY 约50k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_LUCKY" "n"
-           #CF-ddns 约50k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_CLOUDFLARE" "n"
-          #EasyTier 约50k  
-        set_feature "CONFIG_FIRMWARE_INCLUDE_EASYTIER" "n"
-         #ALIST文件列表 约80k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_ALIST" "n"
-         #微信推送 约50k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_WXSEND" "n"
-          #网易UU加速器 约50k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_UUPLUGIN" "n"
-         #阿里云盘 约50k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_ALDRIVER" "n"
-         #网易云解锁 约80k 已删除 /trunk/user/httpd/common.h
-        set_feature "CONFIG_FIRMWARE_INCLUDE_WYY" "n" 
-          #巴法云 约90k
-        set_feature "CONFIG_FIRMWARE_INCLUDE_BAFA" "n"
-         #在线文件管理服务不占空间(4.0kb左右)
-        set_feature "CONFIG_FIRMWARE_INCLUDE_CADDY" "n"
-         #smartdns
-        set_feature "CONFIG_FIRMWARE_INCLUDE_SMARTDNS" "n"
-         #adguardhome不占空间(7.2kb左右)
-        set_feature "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME" "n"
-          #nc工具
-        set_feature "CONFIG_FIRMWARE_INCLUDE_NETCAT" "n"
-         #MSD_LITE工具
-        set_feature "CONFIG_FIRMWARE_INCLUDE_MSD_LITE" "n"
-        
-        
-        #echo "CONFIG_FIRMWARE_INCLUDE_V2RAYA=n" >> .config #v2raya 已删除 /trunk/user/httpd/common.h
-        #echo "CONFIG_FIRMWARE_INCLUDE_NVPPROXY=n" >> .config #NVPPROXY 已删除 请查看/trunk/user/httpd/common.h
-        ##科学上网## 已删除 请查看/trunk/user/httpd/common.h
-        #echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=n" >> .config #SS plus+ 科学上网插件
-        #echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> .config #无需集成会在线下载
-        #echo "CONFIG_FIRMWARE_INCLUDE_XRAY=n" >> .config #无需集成会在线下载
-        #echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config #无需集成会在线下载
-        #echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=n" >> .config # simple-obfs混淆插件
-        
-        #########################################################################################
-
-
-
-
+               ##################################
+              ## FRPC 客户端 约8k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_FRPC" "n"
+             ## FRPS 服务端 约8k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_FRPS" "n"
+             ## wireguard 约1M
+          set_feature "CONFIG_FIRMWARE_INCLUDE_WIREGUARD" "n"
+             ## tunsafe（wireguard的TCP方式）
+          set_feature "CONFIG_FIRMWARE_INCLUDE_TUNSAFE" "n" 
+             ## zerotier 约 20k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_ZEROTIER" "n"
+             #阿里DDNS ~20k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_ALIDDNS" "n"
+             #ddnsto 约800k  已删除 /trunk/user/httpd/common.h
+          set_feature "CONFIG_FIRMWARE_INCLUDE_DDNSTO" "n"
+              #tailscale 约20k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_TAILSCALE" "n"
+              #皎月连 约20k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_NATPIERCE" "n"
+               #vnt客户端 约80k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_VNTCLI" "n"
+                #vnt服务端 约50k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_VNTS" "n"
+             #CF的隧道 约50k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_CLOUDFLARED" "n" 
+              #LUCKY 约50k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_LUCKY" "n"
+               #CF-ddns 约50k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_CLOUDFLARE" "n"
+              #EasyTier 约50k  
+          set_feature "CONFIG_FIRMWARE_INCLUDE_EASYTIER" "n"
+             #ALIST文件列表 约80k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_ALIST" "n"
+             #微信推送 约50k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_WXSEND" "n"
+              #网易UU加速器 约50k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_UUPLUGIN" "n"
+             #阿里云盘 约50k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_ALDRIVER" "n"
+             #网易云解锁 约80k 已删除 /trunk/user/httpd/common.h
+          set_feature "CONFIG_FIRMWARE_INCLUDE_WYY" "n" 
+              #巴法云 约90k
+          set_feature "CONFIG_FIRMWARE_INCLUDE_BAFA" "n"
+             #在线文件管理服务不占空间(4.0kb左右)
+          set_feature "CONFIG_FIRMWARE_INCLUDE_CADDY" "n"
+             #smartdns
+          set_feature "CONFIG_FIRMWARE_INCLUDE_SMARTDNS" "n"
+             #adguardhome不占空间(7.2kb左右)
+          set_feature "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME" "n"
+              #nc工具
+          set_feature "CONFIG_FIRMWARE_INCLUDE_NETCAT" "n"
+             #MSD_LITE工具
+          set_feature "CONFIG_FIRMWARE_INCLUDE_MSD_LITE" "n"
 
           # helper functions
           disable_feature() { sed -i "/${1}/d" .config || true; }
           set_feature() { echo "${1}=${2}" >> .config; }
 
-          disable_feature "CONFIG_FIRMWARE_ENABLE_IPV6"
-          disable_feature "CONFIG_FIRMWARE_ENABLE_USB"
-          disable_feature "CONFIG_FIRMWARE_INCLUDE_OPENVPN"
-
-          set_feature "CONFIG_FIRMWARE_ENABLE_IPV6" "y"
-          set_feature "CONFIG_FIRMWARE_ENABLE_USB" "y"
-          set_feature "CONFIG_FIRMWARE_INCLUDE_CURL" "y"
 
           sudo ./clear_tree
           sudo ./build_firmware_modify "$TNAME" 0
@@ -503,14 +481,4 @@ jobs:
           name: K2P-USB
           path: /opt/images
 
-      - name: Release
-        if: success()
-        uses: softprops/action-gh-release@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag_name: ${{ env.tag }}
-          files: /opt/images/*
-          body: |
-            > ### ![](https://img.shields.io/badge/%E7%BC%96%E8%AF%91%E6%97%B4%E9%97%B4-${{ env.build_time }}-8267?logo=github&labelColor=%E9%A1%BB)![](https://img.shields.io/github/downloads/${{ github.repository }}/total)
-
-            `型号.config` 是集成的插件模板
+     
