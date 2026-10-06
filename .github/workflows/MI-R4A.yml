@@ -89,5 +89,4 @@ jobs:
           cp -f .config /opt/images/${TNAME}.config
 
           echo "build_time=$(date '+%Y年%m月%d日%H:%M:%S')" >> "$GITHUB_ENV"
-          echo "tag=$(date -u '+%Y%m%d-%H%M%S')" >> "$GITHUB
-          
+          echo "tag=$(date -u '+%Y%m%d-%H%M%S')" >> "$GITHUB_ENV"
