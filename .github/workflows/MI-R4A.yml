@@ -86,9 +86,3 @@ jobs:
           sudo ./clear_tree
           sudo ./build_firmware_modify "$TNAME" 0
           sudo mv -f images/*.trx /opt/images/
-          cp -f .config /opt/images/${TNAME}.config
-
-          echo "build_time=$(date '+%Y年%m月%d日%H:%M:%S')" >> "$GITHUB_ENV"
-          echo "tag=$(date -u '+%Y%m%d-%H%M%S')" >> "$GITHUB_ENV"
-
-
