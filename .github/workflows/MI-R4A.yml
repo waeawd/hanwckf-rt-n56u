@@ -90,3 +90,10 @@ jobs:
 
           echo "build_time=$(date '+%Y年%m月%d日%H:%M:%S')" >> "$GITHUB_ENV"
           echo "tag=$(date -u '+%Y%m%d-%H%M%S')" >> "$GITHUB_ENV"
+          
+      - name: Upload packages
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MI-R4A
+          path: /opt/images
