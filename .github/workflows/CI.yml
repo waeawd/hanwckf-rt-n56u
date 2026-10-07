@@ -9,9 +9,9 @@ on:
   workflow_dispatch:
     inputs:
       debug_enabled:
-        description: 'Enable tmate debugging'
+        description: "Enable tmate debugging"
         required: false
-        default: 'no'
+        default: "no"
   release:
     types: [published]
 
@@ -23,19 +23,20 @@ jobs:
   build:
     name: build (${{ matrix.build_variant }})
     runs-on: ubuntu-22.04
-    if: ${{ !(github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')) }}
     timeout-minutes: 120
+    if: ${{ github.event_name != 'push' || !startsWith(github.ref, 'refs/tags/') }}
+    env:
+      IMAGES_DIR: /opt/images
+      TARGETS: ${{ matrix.targets }}
     strategy:
       fail-fast: false
       matrix:
         include:
           - build_variant: mt7620
-           targets: " PSG1218"
+            targets: PSG1218
           - build_variant: mt7621-usb
-           targets: "K2P-USB"
-      build_variant: ${{ matrix.build_variant }}
-      targets: ${{ matrix.targets }}
-      images_dir: /opt/images
+            targets: K2P-USB
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -72,11 +73,12 @@ jobs:
         run: |
           set -euxo pipefail
           cd trunk
-          mkdir -p "${images_dir}"
-          for m in $targets; do
+          mkdir -p "${IMAGES_DIR}"
+
+          for m in ${TARGETS}; do
             fakeroot ./build_firmware_ci "$m"
             if [ $? -eq 0 ]; then
-              cp -f images/*.trx "${images_dir}/$m.trx"
+              cp -f images/*.trx "${IMAGES_DIR}/$m.trx"
             else
               exit 1
             fi
@@ -88,14 +90,16 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
-          ls -lh "${images_dir}"
+          ls -lh "${IMAGES_DIR}"
+
           GIT_VERSION="$(git rev-parse --short=7 HEAD 2>/dev/null || true)"
           if [ -n "${GIT_VERSION}" ]; then
-            image_name="images_${build_variant}_${GIT_VERSION}"
+            image_name="images_${{ matrix.build_variant }}_${GIT_VERSION}"
           else
-            image_name="images_${build_variant}"
+            image_name="images_${{ matrix.build_variant }}"
           fi
-          cd "${images_dir}"
+
+          cd "${IMAGES_DIR}"
           md5sum ./*.trx | tee md5sum.txt
           7z a -mx=9 "${image_name}.7z" ./*
           echo "image_name=${image_name}" >> "$GITHUB_ENV"
@@ -105,7 +109,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.image_name || format('{0}-artifacts', matrix.build_variant) }}
-          path: ${{ env.images_dir }}/*.7z
+          path: ${{ env.IMAGES_DIR }}/*.7z
           if-no-files-found: error
 
       - name: Upload images to Releases
@@ -113,9 +117,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ env.images_dir }}/*.trx
+          file: ${{ env.IMAGES_DIR }}/*.trx
           tag: ${{ github.ref_name }}
-          overwrite: true
-          file_glob: true
           overwrite: true
           file_glob: true
